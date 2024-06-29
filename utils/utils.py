@@ -48,7 +48,7 @@ def generate_pseudo_labels(model, data, batch_size=64):
         batch_data = data[i:i + batch_size]
         batch_pseudo_labels = model.predict(batch_data)
         batch_pseudo_labels = np.argmax(batch_pseudo_labels, axis=1)
-        pseudo_labels.append(batch_pseudo_labels.numpy())
+        pseudo_labels.append(batch_pseudo_labels)
     return np.concatenate(pseudo_labels)
 
 def get_data_generator(rotation_range=15, width_shift_range=0.1, height_shift_range=0.1):
