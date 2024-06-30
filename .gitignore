@@ -1,2 +1,5 @@
 /data
 /myenv
+/cnn/train_data_dir
+/cnn/val_data_dir
+/cnn/test_data_dir
